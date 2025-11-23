@@ -4,7 +4,7 @@
     --accent-color: #FF8400;
     --orange-hover: #E67E22;
     --logo-blue: #8FA0D8;
-    --second-accent-color: #8FA0D8;
+    --secondary-accent-color: #8FA0D8;
     --blue-hover: #84A9AC;
     --primary-background: #0B0B29;
     --secondary-background: #F9D9C6;
@@ -19,13 +19,14 @@
 body{
     background-color: var(--primary-background);
     font-family: var(--font-manrope);
+    color: var(--secondary-text-color);
 }
 h1, h2, h3, h4, h5, h6{
     font-family: var(--font-baloo);
     font-weight: var(--font-baloo-weight);
-    color: var(--second-accent-color);
+    color: var(--secondary-accent-color);
 }
-ul{
+#nav ul{
     list-style-type: none;
     padding: 10px 20px;
     margin: -100px auto;
@@ -38,29 +39,71 @@ ul{
     height: 40px;
     transition-duration: 0.3s;
 }
-ul:hover{
+#nav ul:hover{
     background-color: 
     rgba(249,217,198,0.3);
 }
-ul li{
+#nav ul li{
     flex-direction: row;
 }
-a:not(#logo){
+#nav a:not(#logo){
     text-decoration: none;
-    color: var(--second-accent-color);
+    color: var(--secondary-accent-color);
     font-size: 20px;
     font-weight: 500;
     text-transform: uppercase;
     line-height: 40px;
 }
-a:not(#logo):hover{
+#nav a:not(#logo):hover{
     color: var(--accent-color);
 }
 
 #logo{
     display: block;
     margin-top: 40px;
+    margin-left: 100px;
 }
 #header{
+    margin: 0 auto;
     margin-top: 240px;
+    display: flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+    width: 1428px;
+    gap: 140px;
+}
+#header img{
+    width:572px;
+}
+h1{
+    font-size: 64px;
+    color: var(--secondary-accent-color);
+}
+h1:nth-child(1){
+    margin-bottom: 0;
+    margin-top: 0;
+}
+h1:nth-child(2){
+    margin-left: 150px;
+    margin-top: 0;
+}
+
+#whoami ,#whatido{
+    width: 1920px;
+    height: 1080px;
+
+}
+#main h2, #footer h2{
+    font-size: 56px;
+    text-align: center;
+    color: var(--accent-color);
+}
+#main h3{
+    font-size: 48px;
+}
+#whoami{
+
+}
+#whoami img{
 }
