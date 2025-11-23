@@ -1,0 +1,66 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+:root{
+    --logo-orange: #FF8400;
+    --accent-color: #FF8400;
+    --orange-hover: #E67E22;
+    --logo-blue: #8FA0D8;
+    --second-accent-color: #8FA0D8;
+    --blue-hover: #84A9AC;
+    --primary-background: #0B0B29;
+    --secondary-background: #F9D9C6;
+    --text-color: #2C3E50;
+    --secondary-text-color: #F5F6F7;
+    --font-manrope: 'Manrope', sans-serif;
+    --font-baloo: 'Baloo 2', sans-serif;
+    --font-baloo-weight: 800;
+}
+
+
+body{
+    background-color: var(--primary-background);
+    font-family: var(--font-manrope);
+}
+h1, h2, h3, h4, h5, h6{
+    font-family: var(--font-baloo);
+    font-weight: var(--font-baloo-weight);
+    color: var(--second-accent-color);
+}
+ul{
+    list-style-type: none;
+    padding: 10px 20px;
+    margin: -100px auto;
+    display: flex;
+    background-color: 
+    rgba(132,169,172,0.05);
+    width: 910px;
+    justify-content: space-between;
+    border-radius: 40px;
+    height: 40px;
+    transition-duration: 0.3s;
+}
+ul:hover{
+    background-color: 
+    rgba(249,217,198,0.3);
+}
+ul li{
+    flex-direction: row;
+}
+a:not(#logo){
+    text-decoration: none;
+    color: var(--second-accent-color);
+    font-size: 20px;
+    font-weight: 500;
+    text-transform: uppercase;
+    line-height: 40px;
+}
+a:not(#logo):hover{
+    color: var(--accent-color);
+}
+
+#logo{
+    display: block;
+    margin-top: 40px;
+}
+#header{
+    margin-top: 240px;
+}
