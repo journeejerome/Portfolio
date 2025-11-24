@@ -188,6 +188,9 @@ margin: 0;
 #whatido h2{
     margin-bottom: 40px;
 }
+#whatido a{
+    text-decoration: none;
+}
 .work p{
     color: var(--text-color);
     margin: 0;
@@ -199,4 +202,55 @@ margin: 0;
 }
 .work h3{
     margin: 0;
+}
+#footer a{
+    color: var(--secondary-text-color);
+    font-size: 24px;
+    font-weight: 600;
+    font-family: var(--font-manrope);
+    display: block;
+    text-decoration: none;
+    margin-bottom: 5px;
+    line-height: 32px;
+}
+#footer h2{
+    margin-bottom: 40px;
+}
+#footer a[title*="Instagram"]::before{
+    content: "";
+    display: inline-block;
+    width: 32px; /* adapte */
+    height: 32px;
+    background-color: white; /* couleur finale */
+    mask: url("./img/instagram.svg") no-repeat center / contain;
+    -webkit-mask: url("./img/instagram.svg") no-repeat center / contain;
+    vertical-align:text-top;
+    margin-right: 20px;
+}
+#footer a[title*="mail"]::before{
+    content: "";
+    display: inline-block;
+    width: 32px; /* adapte */
+    height: 32px;
+    background-color: white; /* couleur finale */
+    mask: url("./img/mail.svg") no-repeat center / contain;
+    -webkit-mask: url("./img/mail.svg") no-repeat center / contain;
+    vertical-align:text-top;
+    margin-right: 20px;
+}
+#footer a[title*="CV"]::before{
+    content: "";
+    display: inline-block;
+    width: 32px; /* adapte */
+    height: 32px;
+    background-color: white; /* couleur finale */
+    mask: url("./img/file-text.svg") no-repeat center / contain;
+    -webkit-mask: url("./img/file-text.svg") no-repeat center / contain;
+    vertical-align:text-top;
+    margin-right: 20px;
+}
+#link{
+    margin: 0 auto;
+    width: fit-content;
+    margin-bottom: 20px;
 }

@@ -1,0 +1,80 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+:root{
+    --logo-orange: #FF8400;
+    --accent-color: #FF8400;
+    --orange-hover: #E67E22;
+    --logo-blue: #8FA0D8;
+    --secondary-accent-color: #8FA0D8;
+    --blue-hover: #84A9AC;
+    --primary-background: #0B0B29;
+    --secondary-background: #F9D9C6;
+    --text-color: #2C3E50;
+    --secondary-text-color: #F5F6F7;
+    --font-manrope: 'Manrope', sans-serif;
+    --font-baloo: 'Baloo 2', sans-serif;
+    --font-baloo-weight: 800;
+}
+#main{
+    margin-top: 240px;
+}
+h1{
+    color: var(--accent-color);
+    text-align: center;
+}
+#main h2{
+    color: var(--secondary-accent-color);
+}
+#main ul{
+    list-style-type: none;
+}
+.proto{
+    display: grid;
+    grid-template: 
+    'a a'
+    'b c';
+    width: 1720px;
+    margin: 0 auto;
+    align-items: center;
+    margin-bottom: 80px;
+}
+.proto h2{
+    grid-area: a;
+    text-align: center;
+}
+.proto img{
+    width: 412px;
+    height: 464px;
+    grid-area: b;
+}
+.proto img[alt*="Movie"]{
+    width: 678px;
+}
+.text {
+    grid-area: c;
+}
+.row h3{
+    font-family: var(--font-manrope);
+    color: var(--accent-color);
+    font-size: 24px;
+    font-weight: 500;
+    width: 135px;
+    margin: 0;
+}
+.row p{
+    font-size: 24px;
+    margin: 0;
+    width: 715px;
+    height: auto;
+    line-height: 24px;
+}
+.row{
+    display: flex;
+    align-items: baseline ; /* 🔥 aligne parfaitement le h3 et le p */
+	gap: 40px;
+	margin-bottom: 20px;
+	max-width: 1133px;
+}
+.row a{
+    color: var(--accent-color);
+    text-decoration: none;
+}
