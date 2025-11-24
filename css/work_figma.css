@@ -60,6 +60,7 @@ h1{
     font-weight: 500;
     width: 135px;
     margin: 0;
+    text-align: right;
 }
 .row p{
     font-size: 24px;
@@ -70,7 +71,7 @@ h1{
 }
 .row{
     display: flex;
-    align-items: baseline ; /* 🔥 aligne parfaitement le h3 et le p */
+    align-items: baseline ;
 	gap: 40px;
 	margin-bottom: 20px;
 	max-width: 1133px;
@@ -78,4 +79,7 @@ h1{
 .row a{
     color: var(--accent-color);
     text-decoration: none;
+}
+.row a:hover{
+    color: var(--orange-hover);
 }
