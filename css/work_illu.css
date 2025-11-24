@@ -36,9 +36,9 @@ h1::before{
 }
 #grid{
     display: grid;
-    width: 1720px;
+    width: 80%;
     margin: 0 auto;
-    height: fit-content;
+    height: auto;
     grid-template-columns: repeat(3, 1fr);
     grid-template-rows: repeat(3, 1fr);
     grid-column-gap: 0px;
@@ -46,6 +46,6 @@ h1::before{
 }
 #grid img{
     width: 100%;
-    height: 376px;
+    height: 100%;
     border: 1px solid var(--accent-color);
 }

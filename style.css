@@ -14,13 +14,23 @@
     --font-baloo: 'Baloo 2', sans-serif;
     --font-baloo-weight: 800;
 }
-
+@media screen and (max-width: 1600px) {
+    #notBurger{
+        visibility: hidden;
+    }
+    .ham-menu{
+        opacity: 1 !important;
+    }
+}
 
 body{
     background-color: var(--primary-background);
     font-family: var(--font-manrope);
     color: var(--secondary-text-color);
+}
+#content{
     max-width: 1920px;
+    margin: 0 auto;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: var(--font-baloo);

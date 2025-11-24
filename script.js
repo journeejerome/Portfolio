@@ -5,15 +5,18 @@ const offScreenMenu = document.querySelector(".off-screen-menu");
 let lastKnownScrollPosition = 0;
 let ticking = false;
 
+
 function doSomething(scrollPos) {
   if (scrollPos != 0) {
     buttonScroll.style.opacity = "1";
     hamMenu.style.opacity = "1";
   } else {
     buttonScroll.style.opacity = "0";
-    hamMenu.style.opacity = "0";
     hamMenu.classList.remove('active');
-  offScreenMenu.classList.remove('active');
+    offScreenMenu.classList.remove('active');
+    if (window.innerWidth>1600) {
+      hamMenu.style.opacity = "0";
+    }
   }
 }
 
@@ -34,7 +37,21 @@ document.addEventListener("scroll", (event) => {
 buttonScroll.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
+
 hamMenu.addEventListener('click',() => {
   hamMenu.classList.toggle('active');
   offScreenMenu.classList.toggle('active');
+});
+
+window.addEventListener("resize", () => {
+  if (window.innerWidth < 1600) {
+    hamMenu.style.opacity = "1";
+  } else {
+    if (lastKnownScrollPosition == 0) {
+      hamMenu.style.opacity = "0";
+    }
+    else {
+      hamMenu.style.opacity = "1";
+    }
+  }
 });
