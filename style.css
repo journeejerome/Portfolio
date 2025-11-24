@@ -20,6 +20,7 @@ body{
     background-color: var(--primary-background);
     font-family: var(--font-manrope);
     color: var(--secondary-text-color);
+    max-width: 1920px;
 }
 h1, h2, h3, h4, h5, h6{
     font-family: var(--font-baloo);
@@ -260,4 +261,20 @@ margin: 0;
     margin: 0 auto;
     width: fit-content;
     margin-bottom: 20px;
+}
+#buttonScroll{
+    display: block;
+    width: 60px;
+    height: 60px;
+    background-color: var(--secondary-accent-color);
+    mask: url("./img/arrow-up.svg") no-repeat center / contain;
+    -webkit-mask: url("./img/arrow-up.svg") no-repeat center / contain;
+    position: fixed;
+    bottom: 40px;
+    right: 40px;
+    border-radius: 30px;
+    transition-duration: 0.5s;
+    z-index: 10;
+    opacity: 0;
+    cursor: pointer;
 }
