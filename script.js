@@ -12,6 +12,8 @@ function doSomething(scrollPos) {
   } else {
     buttonScroll.style.opacity = "0";
     hamMenu.style.opacity = "0";
+    hamMenu.classList.remove('active');
+  offScreenMenu.classList.remove('active');
   }
 }
 
