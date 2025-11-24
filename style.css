@@ -264,17 +264,31 @@ margin: 0;
 }
 #buttonScroll{
     display: block;
-    width: 60px;
-    height: 60px;
-    background-color: var(--secondary-accent-color);
-    mask: url("./img/arrow-up.svg") no-repeat center / contain;
-    -webkit-mask: url("./img/arrow-up.svg") no-repeat center / contain;
+    width: 40px;
+    height: 40px;
+    background-color: var(--accent-color);
+    background-repeat: no-repeat;
+    background-position: center;
     position: fixed;
     bottom: 40px;
     right: 40px;
-    border-radius: 30px;
+    border: none;
+    border-radius: 0px;
     transition-duration: 0.5s;
     z-index: 10;
     opacity: 0;
     cursor: pointer;
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    transform: rotate(30deg);
+}
+#buttonScroll::after{
+    content: "";
+    position: absolute;
+    inset: 0;
+    background-color: var(--secondary-accent-color);
+    mask: url("./img/arrow-up.svg") no-repeat center / contain;
+    -webkit-mask: url("./img/arrow-up.svg") no-repeat center / contain;
+    background-size: cover;
+    background-position: center;
+    transform: rotate(-30deg);
 }
