@@ -95,6 +95,7 @@ nav{
     top: 25px;
     z-index: 11;
     opacity: 0;
+    cursor: pointer;
 }
 .ham-menu span{
     height: 5px;
