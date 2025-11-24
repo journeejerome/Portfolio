@@ -1,0 +1,30 @@
+@import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+:root{
+    --logo-orange: #FF8400;
+    --accent-color: #FF8400;
+    --orange-hover: #E67E22;
+    --logo-blue: #8FA0D8;
+    --secondary-accent-color: #8FA0D8;
+    --blue-hover: #84A9AC;
+    --primary-background: #0B0B29;
+    --secondary-background: #F9D9C6;
+    --text-color: #2C3E50;
+    --secondary-text-color: #F5F6F7;
+    --font-manrope: 'Manrope', sans-serif;
+    --font-baloo: 'Baloo 2', sans-serif;
+    --font-baloo-weight: 800;
+}
+#main{
+    margin-top: 240px;
+}
+h1{
+    color: var(--accent-color);
+    text-align: center;
+    margin-bottom: 120px !important;
+}
+#grid{
+    display: grid;
+    width: 1720px;
+    margin: 0 auto;
+    height: 1000px;
+}

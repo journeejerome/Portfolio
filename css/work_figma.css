@@ -20,6 +20,7 @@
 h1{
     color: var(--accent-color);
     text-align: center;
+    margin-bottom: 120px !important;
 }
 #main h2{
     color: var(--secondary-accent-color);
@@ -65,7 +66,7 @@ h1{
     margin: 0;
     width: 715px;
     height: auto;
-    line-height: 24px;
+    line-height: 1.3em;
 }
 .row{
     display: flex;

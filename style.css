@@ -88,6 +88,9 @@ h1:nth-child(2){
     margin-left: 150px;
     margin-top: 0;
 }
+#main{
+    margin-top: 120px;
+}
 #main h2, #footer h2{
     display: block;
     width: fit-content;
@@ -148,6 +151,7 @@ margin: 0;
     width: 1920px;
     height: fit-content;
     margin-bottom: 80px;
+    margin-top: 80px;
 }
 #whatido_content{
     margin: 0 auto;
@@ -202,6 +206,9 @@ margin: 0;
 }
 .work h3{
     margin: 0;
+}
+#footer{
+    margin-top: 120px;
 }
 #footer a{
     color: var(--secondary-text-color);
