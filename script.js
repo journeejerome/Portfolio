@@ -1,6 +1,7 @@
 const buttonScroll = document.getElementById("buttonScroll");
 const hamMenu = document.querySelector(".ham-menu");
 const offScreenMenu = document.querySelector(".off-screen-menu");
+const offScreenMenuLink = document.querySelectorAll(".off-screen-menu a");
 let menu_activ = false;
 
 let lastKnownScrollPosition = 0;
@@ -70,8 +71,6 @@ window.addEventListener("resize", () => {
 });
 
 document.addEventListener("click", (e) => {
-  console.log(menu_activ);
-  console.log(e.target);
   
   
   if (!offScreenMenu.contains(e.target)) {
@@ -83,4 +82,12 @@ document.addEventListener("click", (e) => {
       }
     }
   }
+});
+
+offScreenMenuLink.forEach(link => {
+    link.addEventListener("click", () => {
+        offScreenMenu.classList.remove('active');
+        hamMenu.classList.remove('active');
+        menu_activ = false;
+    });
 });
