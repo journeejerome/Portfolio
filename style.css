@@ -1,4 +1,5 @@
 @import url('https://fonts.googleapis.com/css2?family=Baloo+2:wght@400..800&display=swap');
+/* Déclaration des variables de couleurs pour toutes les pages */
 :root{
     --logo-orange: #FF8400;
     --accent-color: #FF8400;
@@ -14,6 +15,8 @@
     --font-baloo: 'Baloo 2', sans-serif;
     --font-baloo-weight: 800;
 }
+
+/* Détection de la taille de l´écran pour le menu déroulant */
 @media screen and (max-width: 1600px) {
     #notBurger{
         visibility: hidden;
@@ -30,6 +33,8 @@ body{
     color: var(--secondary-text-color);
     margin: 0;
 }
+
+/* Centrer tous les éléments de la page */
 #content{
     max-width: 1920px;
     min-width: 1200px;
@@ -46,8 +51,7 @@ h1, h2, h3, h4, h5, h6{
     padding: 10px 20px;
     margin: -100px auto;
     display: flex;
-    background-color: 
-    rgba(132,169,172,0.05);
+    background-color: rgba(132,169,172,0.05);
     width: 910px;
     justify-content: space-between;
     border-radius: 40px;
@@ -60,7 +64,7 @@ h1, h2, h3, h4, h5, h6{
 #nav #notBurger li{
     flex-direction: row;
     height: 100%;
-    text-shadow: 0 30px 0 var(--secondary-accent-color);
+    text-shadow: 0 30px 0 var(--secondary-accent-color); /* Duplication du texte du menu pour creer l´animation */
     transition: 0.3s ease;
 }
 #nav a:not(#logo){
@@ -72,10 +76,10 @@ h1, h2, h3, h4, h5, h6{
     line-height: 40px;
     display: block;
     height: 100%;
-    overflow: hidden;
+    overflow: hidden; /* Cacher le surplus pour l´animation menu au survol */
 }
 #notBurger a:not(#logo):hover li {
-    transform: translateY(-30px);
+    transform: translateY(-30px); /* Animation au survol du menu */
     text-shadow: 0 30px 0 var(--accent-color);
 }
 #nav a:not(#logo):hover{
@@ -95,7 +99,7 @@ h1, h2, h3, h4, h5, h6{
     align-items: center;
     font-size: 20px;
     transition: .3s ease;
-    z-index: 10;
+    z-index: 10; /* Forcer le menu déroulant à s´afficher au-dessus de tout */
 }
 #nav .off-screen-menu:hover{
     background-color: rgba(249,217,198,0.3);
@@ -115,7 +119,7 @@ h1, h2, h3, h4, h5, h6{
     height: auto;
 }
 #nav #burgerMenu a li{
-    text-shadow: 0 30px 0 var(--secondary-accent-color);
+    text-shadow: 0 30px 0 var(--secondary-accent-color); /* Duplication du texte du menu pour creer l´animation */
     transition: 0.3s ease;
 }
 #nav #burgerMenu a:hover li{
@@ -223,8 +227,8 @@ h1:nth-child(2){
     height: 285px;
     left: 43%;
     top: 389px;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
-    filter: sepia(50%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Créer la forme hexagonale de l´image (chaque combinaison de point égal une coordonnée x et une y) */
+    filter: sepia(50%); /* Filtre sépia sur l´image */
 }
 .whoami_Sections{
     width: fit-content;
@@ -328,7 +332,7 @@ h1:nth-child(2){
     background-repeat: no-repeat;
     background-position: center;
     height: 100%;
-    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%); /* Créer la forme hexagonale de l´image (chaque combinaison de point égal une coordonnée x et une y) */
     width: 100%;
     aspect-ratio: 1/1;
 }
@@ -340,7 +344,7 @@ h1:nth-child(2){
     width: 100%;
     aspect-ratio: 1/1;
     height: 227px;
-    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%); /* Créer la forme hexagonale de l´image (chaque combinaison de point égal une coordonnée x et une y) */
 }
 #illu_logo{
     background-color: var(--primary-background);
@@ -350,7 +354,7 @@ h1:nth-child(2){
     width: 100%;
     aspect-ratio: 1/1;
     height: 227px;
-    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%);
+    clip-path: polygon(25% 5%, 75% 5%, 100% 50%, 75% 95%, 25% 95%, 0% 50%); /* Créer la forme hexagonale de l´image (chaque combinaison de point égal une coordonnée x et une y) */
 }
 .work h3{
     margin: 0;
@@ -375,10 +379,10 @@ h1:nth-child(2){
 #footer a[title*="Instagram"]::before{
     content: "";
     display: inline-block;
-    width: 32px; /* adapte */
+    width: 32px;
     height: 32px;
-    background-color: white; /* couleur finale */
-    mask: url("./img/icon/instagram.svg") no-repeat center / contain;
+    background-color: white;
+    mask: url("./img/icon/instagram.svg") no-repeat center / contain; /* Un masque comme sur photoshop l´élément prends la forme du SVG 9Utilisé ici juste pour changer la couleur du fichier ^^ */
     -webkit-mask: url("./img/icon/instagram.svg") no-repeat center / contain;
     vertical-align:text-top;
     margin-right: 20px;
@@ -386,10 +390,10 @@ h1:nth-child(2){
 #footer a[title*="mail"]::before{
     content: "";
     display: inline-block;
-    width: 32px; /* adapte */
+    width: 32px;
     height: 32px;
-    background-color: white; /* couleur finale */
-    mask: url("./img/icon/mail.svg") no-repeat center / contain;
+    background-color: white;
+    mask: url("./img/icon/mail.svg") no-repeat center / contain; /* Un masque comme sur photoshop l´élément prends la forme du SVG 9Utilisé ici juste pour changer la couleur du fichier ^^ */
     -webkit-mask: url("./img/icon/mail.svg") no-repeat center / contain;
     vertical-align:text-top;
     margin-right: 20px;
@@ -397,10 +401,10 @@ h1:nth-child(2){
 #footer a[title*="CV"]::before{
     content: "";
     display: inline-block;
-    width: 32px; /* adapte */
+    width: 32px; 
     height: 32px;
-    background-color: white; /* couleur finale */
-    mask: url("./img/icon/file-text.svg") no-repeat center / contain;
+    background-color: white;
+    mask: url("./img/icon/file-text.svg") no-repeat center / contain; /* Un masque comme sur photoshop l´élément prends la forme du SVG 9Utilisé ici juste pour changer la couleur du fichier ^^ */
     -webkit-mask: url("./img/icon/file-text.svg") no-repeat center / contain;
     vertical-align:text-top;
     margin-right: 20px;
@@ -434,7 +438,7 @@ h1:nth-child(2){
     position: absolute;
     inset: 0;
     background-color: var(--secondary-accent-color);
-    mask: url("./img/icon/arrow-up.svg") no-repeat center / contain;
+    mask: url("./img/icon/arrow-up.svg") no-repeat center / contain; /* Un masque comme sur photoshop l´élément prends la forme du SVG 9Utilisé ici juste pour changer la couleur du fichier ^^ */
     -webkit-mask: url("./img/icon/arrow-up.svg") no-repeat center / contain;
     background-size: cover;
     background-position: center;

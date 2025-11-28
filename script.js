@@ -1,13 +1,14 @@
+//Initialisation des variables (const pour les variables qui ne chageront pas et var pour les booléens (true ou false / vrai ou faux) et let pour les nombres)
 const buttonScroll = document.getElementById("buttonScroll");
 const hamMenu = document.querySelector(".ham-menu");
 const offScreenMenu = document.querySelector(".off-screen-menu");
 const offScreenMenuLink = document.querySelectorAll(".off-screen-menu a");
-let menu_activ = false;
 
+var menu_activ = false;
+var ticking = false;
 let lastKnownScrollPosition = 0;
-let ticking = false;
 
-
+//Fonction pour afficher le bouton du déroulant au scroll
 function doSomething(scrollPos) {
   if (scrollPos != 0) {
     buttonScroll.style.opacity = "1";
@@ -25,11 +26,14 @@ function doSomething(scrollPos) {
   }
 }
 
+
+
+//Écoute du document pour détecter le scroll
 document.addEventListener("scroll", (event) => {
   lastKnownScrollPosition = window.scrollY;
 
   if (!ticking) {
-    // Throttle the event to "do something" every 20ms
+    // Temporiser la fonction pour ne pas surcharger la page
     setTimeout(() => {
       doSomething(lastKnownScrollPosition);
       ticking = false;
@@ -39,10 +43,12 @@ document.addEventListener("scroll", (event) => {
   }
 });
 
+//Écoute du bouton pour scroller tout en haut de la page
 buttonScroll.addEventListener("click", () => {
   window.scrollTo({ top: 0, behavior: "smooth" });
 });
 
+//Écoute du bouton pour afficher le menu déroulant
 hamMenu.addEventListener('click',() => {
   hamMenu.classList.toggle('active');
   offScreenMenu.classList.toggle('active');
@@ -54,6 +60,7 @@ hamMenu.addEventListener('click',() => {
   
 });
 
+//Écoute du document pour afficher le bouton du menu déroulant en fonction de la taille de la fenêtre
 window.addEventListener("resize", () => {
   if (window.innerWidth < 1600) {
     hamMenu.style.opacity = "1";
@@ -70,9 +77,8 @@ window.addEventListener("resize", () => {
   }
 });
 
+//Écoute du document pour fermer le menu déroulant au click sur la page
 document.addEventListener("click", (e) => {
-  
-  
   if (!offScreenMenu.contains(e.target)) {
     if (!hamMenu.contains(e.target)) {
       if (menu_activ) {
@@ -84,8 +90,9 @@ document.addEventListener("click", (e) => {
   }
 });
 
+//Boucle pour fermer le menu déroulant si click sur un des liens
 offScreenMenuLink.forEach(link => {
-    link.addEventListener("click", () => {
+    link.addEventListener("click", () => { //Écoute sur chaques liens du menu
         offScreenMenu.classList.remove('active');
         hamMenu.classList.remove('active');
         menu_activ = false;

@@ -10,7 +10,7 @@ h1{
 h1::before{
     content: "";
     display: inline-block;
-    width: 32px; /* adapte */
+    width: 32px;
     height: 64px;
     background-image: url("../img/logos/figma_logo.png");
     background-position: center;

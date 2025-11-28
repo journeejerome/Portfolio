@@ -10,7 +10,7 @@ h1{
 h1::before{
     content: "";
     display: inline-block;
-    width: 64px; /* adapte */
+    width: 64px;
     height: 64px;
     background-image: url("../img/logos/illu.png");
     background-position: center;
