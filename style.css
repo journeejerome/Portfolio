@@ -51,7 +51,7 @@ h1, h2, h3, h4, h5, h6{
     padding: 10px 20px;
     margin: -100px auto;
     display: flex;
-    background-color: rgba(132,169,172,0.05);
+    background-color: rgba(132,169,172,0.5);
     width: 910px;
     justify-content: space-between;
     border-radius: 40px;
@@ -59,7 +59,7 @@ h1, h2, h3, h4, h5, h6{
     transition-duration: 0.3s;
 }
 #nav #notBurger:hover{
-    background-color: rgba(249,217,198,0.3);
+    background-color: rgba(249,217,198,0.5);
 }
 #nav #notBurger li{
     flex-direction: row;
@@ -86,7 +86,7 @@ h1, h2, h3, h4, h5, h6{
     color: var(--accent-color);
 }
 #nav .off-screen-menu{
-    background-color: rgba(132,169,172,0.05);
+    background-color: rgba(249,217,198,0.9);
     height: 100vh;
     width: 100%;
     max-width: 250px;
@@ -102,7 +102,7 @@ h1, h2, h3, h4, h5, h6{
     z-index: 10; /* Forcer le menu déroulant à s´afficher au-dessus de tout */
 }
 #nav .off-screen-menu:hover{
-    background-color: rgba(249,217,198,0.3);
+    background-color: rgba(249,217,198,1);
 }
 #nav .off-screen-menu ul{
     list-style-type: none;
