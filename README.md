@@ -19,17 +19,17 @@ Hexa-Track.
 
 ### 👤 Who Am I?
 
--   UX : user research, wireframes, user flows, usability tests\
--   UI : design systems, prototypage Figma, accessibilité\
--   Soft skills : calme, empathique, solution-oriented\
--   Tech : HTML/CSS/JS, Figma, Adobe Suite, VS Code\
--   Background : études en infographie & UI/UX
+- UX : user research, wireframes, user flows, usability tests\
+- UI : design systems, prototypage Figma, accessibilité\
+- Soft skills : calme, empathique, solution-oriented\
+- Tech : HTML/CSS/JS, Figma, Adobe Suite, VS Code\
+- Background : études en infographie & UI/UX
 
 ### ⚙️ What I Do
 
--   **Prototype Figma**
--   **Website**
--   **Illustration**
+- **Prototype Figma**
+- **Website**
+- **Illustration**
 
 ### 🎨 Illustration
 
@@ -37,9 +37,9 @@ Galerie d'illustrations réalisées sous Photoshop et Illustrator.
 
 ### 🧩 Prototype Figma
 
--   **Vibe Nation**
--   **CinéMovie**
--   **MusicApp**
+- **Vibe Nation**
+- **CinéMovie**
+- **MusicApp**
 
 ## 🛠️ Technologies
 
@@ -47,11 +47,15 @@ HTML5, CSS3, JavaScript, Figma, Photoshop, Illustrator, VS Code.
 
 ## 📁 Structure
 
-    /assets
-    /pages
     /css
-    /js
+    /files
+    /html
+    /img
+        /icon
     index.html
+    README.md
+    script.js
+    style.css
 
 ## 🚀 Objectifs
 
@@ -59,6 +63,6 @@ Présenter mon travail de manière claire, fluide et professionnelle.
 
 ## 📬 Contact
 
--   Instagram : @Jerome_Jrn\
--   Email : journee.jerome@gmail.com\
--   CV : disponible sur le site
+- Instagram : @Jerome_Jrn\
+- Email : journee.jerome@gmail.com\
+- CV : disponible sur le site
