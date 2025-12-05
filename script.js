@@ -12,16 +12,20 @@ let lastKnownScrollPosition = 0;
 function doSomething(scrollPos) {
   if (scrollPos != 0) {
     buttonScroll.style.opacity = "1";
+    buttonScroll.style.display = "inherit";
     hamMenu.style.opacity = "1";
     hamMenu.style.cursor = "pointer";
+    hamMenu.style.display = "block";
   } else {
     buttonScroll.style.opacity = "0";
     hamMenu.classList.remove('active');
     offScreenMenu.classList.remove('active');
     menu_activ = false;
+    buttonScroll.style.display = "none";
     if (window.innerWidth>1600) {
       hamMenu.style.opacity = "0";
       hamMenu.style.cursor = "auto";
+      hamMenu.style.display = "none";
     }
   }
 }
@@ -69,10 +73,12 @@ window.addEventListener("resize", () => {
     if (lastKnownScrollPosition == 0) {
       hamMenu.style.opacity = "0";
       hamMenu.style.cursor = "auto";
+      hamMenu.style.display = "none";
     }
     else {
       hamMenu.style.opacity = "1";
       hamMenu.style.cursor = "pointer";
+      hamMenu.style.display = "inherit";
     }
   }
 });
