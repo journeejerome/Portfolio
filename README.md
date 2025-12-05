@@ -19,10 +19,10 @@ Hexa-Track.
 
 ### 👤 Who Am I?
 
-- UX : user research, wireframes, user flows, usability tests\
-- UI : design systems, prototypage Figma, accessibilité\
-- Soft skills : calme, empathique, solution-oriented\
-- Tech : HTML/CSS/JS, Figma, Adobe Suite, VS Code\
+- UX : user research, wireframes, user flows, usability tests
+- UI : design systems, prototypage Figma, accessibilité
+- Soft skills : calme, empathique, solution-oriented
+- Tech : HTML/CSS/JS, Figma, Adobe Suite, VS Code
 - Background : études en infographie & UI/UX
 
 ### ⚙️ What I Do
