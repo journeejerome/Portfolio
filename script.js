@@ -10,7 +10,7 @@ let lastKnownScrollPosition = 0;
 
 //Fonction pour afficher le bouton du déroulant au scroll
 function doSomething(scrollPos) {
-  if (scrollPos != 0) {
+  if (scrollPos > 100) {
     buttonScroll.style.opacity = "1";
     buttonScroll.style.display = "inherit";
     hamMenu.style.opacity = "1";
