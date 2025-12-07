@@ -4,8 +4,8 @@ const hamMenu = document.querySelector(".ham-menu");
 const offScreenMenu = document.querySelector(".off-screen-menu");
 const offScreenMenuLink = document.querySelectorAll(".off-screen-menu a");
 
-var menu_activ = false;
-var ticking = false;
+let menu_activ = false;
+let ticking = false;
 let lastKnownScrollPosition = 0;
 
 //Fonction pour afficher le bouton du déroulant au scroll
