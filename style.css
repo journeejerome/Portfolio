@@ -38,7 +38,6 @@ body{
 /* Centrer tous les éléments de la page */
 #content{
     max-width: 1920px;
-    min-width: 1200px;
     width: 100vw;
     margin: 0 auto;
 }
@@ -215,7 +214,7 @@ h1:nth-child(2){
     font-size: 56px;
     color: var(--accent-color);
 }
-#whoami h3{
+/* #whoami h3{
     font-size: 48px;
 }
 #whoami{
@@ -230,8 +229,8 @@ h1:nth-child(2){
     height: 285px;
     left: 43%;
     top: 389px;
-    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Créer la forme hexagonale de l´image (chaque combinaison de point égal une coordonnée x et une y) */
-    filter: sepia(50%); /* Filtre sépia sur l´image */
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Créer la forme hexagonale de l´image (chaque combinaison de point égal une coordonnée x et une y) 
+    filter: sepia(50%); Filtre sépia sur l´image 
 }
 .whoami_Sections{
     width: fit-content;
@@ -266,42 +265,97 @@ h1:nth-child(2){
     font-size: 24px;
     font-family: var(--font-manrope);
     font-weight: 500;
+}*/
+
+
+#whoami {
+    /* On enlève la hauteur fixe de 980px pour laisser le contenu décider */
+    height: auto; 
+    padding: 50px 20px;
+    max-width: 1400px; /* On garde une limite max pour les très grands écrans */
+    margin: 0 auto;
 }
+
+/* CONTENEUR GRILLE */
+.whoami-grid {
+    margin-top: 40px;
+    display: grid;
+    gap: 40px; /* Espace entre les éléments */
+    /* Par défaut (Mobile) : 1 seule colonne */
+    grid-template-columns: 1fr; 
+    text-align: center; /* Sur mobile, centrer le texte est souvent plus joli */
+}
+
+/* STYLE DES BOXES */
+.skill-box {
+    background: rgba(255, 255, 255, 0.05); /* Optionnel : petit fond pour lisibilité */
+    padding: 20px;
+    border-radius: 15px;
+    width: 50%;
+    max-width: 250px;
+    text-align: left;
+    margin: 20px auto;
+}
+
+.whoami-grid ul {
+    padding: 0;
+}
+
+/* L'IMAGE CENTRALE */
+.profile-pic {
+    /* Plus de position absolute ! */
+    position: relative; 
+    width: 100%;
+    max-width: 300px; /* Taille max de l'image */
+    height: auto;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    margin-bottom: 30px;
+}
+
+/* --- VERSION ORDINATEUR (Desktop) --- */
+
 #whatido{
     max-width: 1920px;
-    min-width: 1200px;
     width: 100%;
-    height: fit-content;
-    margin-bottom: 80px;
+    height: auto;
     margin-top: 80px;
 }
 #whatido_content{
     margin: 0 auto;
-    max-width: 1920px;
-    width: 98%;
+    min-height: 1500px;
+    max-width: 1400px; /* On réduit la max-width pour éviter des écarts trop grands */
+    width: 90%; /* Utilise la largeur relative du conteneur */
     display: grid;
-    grid-template: 
-    'b c d';
-    gap: 10%;
-    justify-content: center;
+    padding: 20px;
+    gap: 100px;
+    /* LA MAGIE RESPONSIVE : */
+    /* Répète les colonnes (auto-fit) avec une taille min de 280px et max de 1 part (1fr) */
+    grid-template-columns: 1fr; 
+    justify-items: center; /* Centrer les éléments dans la grille */
+    align-items: start;
 }
 #whatido_content a{
+    display: flex;
+    align-items: stretch;
     width: 100%;
-    height: fit-content;
+    height: auto;
 }
+
 .work{
+    margin: 0 auto;
     max-width: 227px;
-    max-height: 442px;
-    width: 100%;
-    height: 100%;
+    width: 80%;
+    height: auto;
     background-color: var(--secondary-accent-color);
     border-radius: 40px;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: space-between;
+    flex: 1 1 auto;
     padding: 40px;
     gap: 10px;
 }
+
 .work h3{
     color: var(--accent-color);
     font-family: var(--font-manrope);
@@ -310,7 +364,7 @@ h1:nth-child(2){
     text-align: center;
     text-shadow: -1px -1px 0 var(--text-color), 1px -1px 0 var(--text-color), -1px 1px 0 var(--text-color), 1px 1px 0 var(--text-color);
 }
-#Work_Figma{
+/* #Work_Figma{
     grid-area: b;
 }
 #Work_Web{
@@ -318,7 +372,7 @@ h1:nth-child(2){
 }
 #Work_Illu{
     grid-area: d;
-}
+} */
 #whatido h2{
     margin-bottom: 40px;
 }
@@ -362,9 +416,10 @@ h1:nth-child(2){
 .work h3{
     margin: 0;
 }
+
+/* ----------------------------------------------------------------------------------- FOOTER------------------------------------------------------------------*/
 #footer{
     margin-top: 180px;
-    min-width: 1200px;
 }
 #footer a{
     color: var(--secondary-text-color);
@@ -448,13 +503,64 @@ h1:nth-child(2){
     transform: rotate(-30deg);
 }
 @keyframes grow {
-  0% {
-    transform: scale(1);
-  }
-  50% {
-    transform: scale(1.1);
-  }
-  100% {
-    transform: scale(1);
-  }
+    0% {
+        transform: scale(1);
+    }
+    50% {
+        transform: scale(1.1);
+    }
+    100% {
+        transform: scale(1);
+    }
+}
+@media screen and (min-width: 1200px) {
+    .whoami-grid {
+        /* On passe à 3 colonnes : 1 part, 1 part, 1 part */
+        grid-template-columns: 1fr 1fr 1fr;
+        align-items: center; /* Centrer verticalement */
+        text-align: left; /* Retour à l'alignement gauche */
+    }
+
+    /* On peut aligner la colonne de droite à droite pour l'effet miroir */
+    .right-col {
+        text-align: right; /* Optionnel, purement esthétique */
+    }
+    
+    /* La colonne du milieu (image) */
+    .center-col {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+    #whatido{
+        max-width: 1920px;
+        width: 100%;
+        height: auto;
+        margin-top: 80px;
+    }
+    #whatido_content{
+        margin: 0 auto;
+        min-height: auto;
+        max-width: 1920px;
+        width: 98%;
+        display: grid;
+        grid-template-columns: 1fr 1fr 1fr;
+        gap: 5%;
+        justify-content: center;
+        align-items: start;
+    }
+
+    .work{
+        margin: 0 auto;
+        max-width: 227px;
+        width: 80%;
+        height: auto;
+        background-color: var(--secondary-accent-color);
+        border-radius: 40px;
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        padding: 40px;
+        gap: 10px;
+    }
 }
