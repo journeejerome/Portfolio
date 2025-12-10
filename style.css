@@ -354,6 +354,10 @@ h1:nth-child(2){
     flex: 1 1 auto;
     padding: 40px;
     gap: 10px;
+    transition: 2s ease;
+}
+#whatido_content a:hover .work{
+    transform: rotateY(360deg);
 }
 
 .work h3{
